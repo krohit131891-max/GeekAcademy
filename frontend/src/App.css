@@ -1,0 +1,5 @@
+/* Global App Styles */
+.app-main {
+  flex-grow: 1;
+  width: 100%;
+}

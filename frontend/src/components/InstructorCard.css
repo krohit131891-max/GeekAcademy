@@ -1,0 +1,97 @@
+.instructor-card {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 24px;
+  background: var(--bg);
+  display: flex;
+  gap: 20px;
+  transition: box-shadow 0.3s ease, transform 0.3s ease, border-color 0.3s ease;
+}
+
+.instructor-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+  border-color: var(--accent);
+}
+
+.instructor-avatar {
+  font-size: 56px;
+  min-width: 88px;
+  height: 88px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, rgba(0, 114, 245, 0.08), rgba(120, 40, 200, 0.08));
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+.instructor-info {
+  flex: 1;
+}
+
+.instructor-name {
+  display: block;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-h);
+  text-decoration: none;
+  margin: 0 0 8px 0;
+  transition: color 0.3s ease;
+}
+
+.instructor-name:hover {
+  color: var(--accent);
+}
+
+.instructor-bio {
+  font-size: 14px;
+  color: var(--text);
+  margin: 0 0 12px 0;
+  line-height: 1.5;
+}
+
+.instructor-meta {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 12px;
+  font-size: 13px;
+  color: var(--text);
+  font-weight: 500;
+  flex-wrap: wrap;
+}
+
+.expertise {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.skill {
+  display: inline-block;
+  background: var(--code-bg);
+  color: var(--text);
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  border: 1px solid var(--border);
+  transition: all 0.25s ease;
+}
+
+@media (max-width: 768px) {
+  .instructor-card {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .instructor-avatar {
+    width: 88px;
+    height: 88px;
+    margin: 0 auto;
+  }
+
+  .instructor-meta {
+    flex-wrap: wrap;
+  }
+}
