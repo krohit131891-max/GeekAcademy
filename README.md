@@ -96,15 +96,17 @@ geek-academy/
    cp .env.example .env
    ```
 
-4. **Update `.env` with your MongoDB Atlas connection string:**
+4. **Update `.env` with your MongoDB Atlas connection string and deployment URLs:**
    ```
    MONGODB_URI=mongodb+srv://username:password@cluster.mongodb.net/geek-academy?retryWrites=true&w=majority
    JWT_SECRET=your_secret_key_here_change_in_production
    JWT_EXPIRE=7d
    NODE_ENV=development
    PORT=5000
-   FRONTEND_URL=http://localhost:5173
+   FRONTEND_URL=https://your-frontend-app.vercel.app
    ```
+
+   If you are still developing locally, keep `FRONTEND_URL=http://localhost:5173` and set the production URL only when you deploy.
 
 5. **Start the backend server:**
    ```bash
@@ -131,8 +133,10 @@ geek-academy/
 
 4. **Update `.env` if needed:**
    ```
-   VITE_API_URL=http://localhost:5000
+   VITE_API_URL=https://your-backend-service.onrender.com
    ```
+
+   For local development, use `http://localhost:5000` instead of the Render URL.
 
 5. **Start the dev server:**
    ```bash

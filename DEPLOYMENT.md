@@ -86,12 +86,12 @@ git push -u origin main
 1. In Railway project, go to "Variables"
 2. Add the following variables:
    ```
-   MONGODB_URI=mongodb+srv://...
+   MONGODB_URI=mongodb+srv://username:password@cluster0.u2ytldk.mongodb.net/?appName=Cluster0
    JWT_SECRET=use_a_strong_secret_key_here
    JWT_EXPIRE=7d
    NODE_ENV=production
    PORT=5000
-   FRONTEND_URL=https://your-frontend-domain.com
+   FRONTEND_URL=https://your-frontend-app.vercel.app
    ```
 3. Click "Save"
 
@@ -121,7 +121,7 @@ git push -u origin main
 1. In Vercel project, go to "Settings" → "Environment Variables"
 2. Add:
    ```
-   VITE_API_URL = https://your-backend-url.railway.app
+   VITE_API_URL = https://your-backend-service.onrender.com
    ```
 3. Click "Save"
 4. Redeploy the project
